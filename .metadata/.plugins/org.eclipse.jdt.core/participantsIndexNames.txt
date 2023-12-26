@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+C:\Users\Asus\Desktop\Java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3471604643.index
+\WebProject2\src\main\java
+C:\Users\Asus\Desktop\Java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3515832843.index
+\SpringMvcProject\src\main\resources
+C:\Users\Asus\Desktop\Java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1618192516.index
+\SpringMvcProject\src\main\java

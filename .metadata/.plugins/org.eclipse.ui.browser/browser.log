@@ -1,0 +1,4 @@
+
+Dec 26, 2023 18:09:58.542 NEW SESSION
+Dec 26, 2023 18:09:58.542 [24304:20940:1226/180958.536:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Dec 26, 2023 18:10:25.430 [24304:20940:1226/181025.429:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106

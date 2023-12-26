@@ -1,0 +1,32 @@
+package day3;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SpringAutoWireConfig {
+	
+	//Registering the Bean type musicsystem
+	public MusicSystem getMusicSystem() {
+		MusicSystem ms= new MusicSystem("Sony" ,"Dobly");
+		return ms;
+	}
+	
+	//Registering a bean id type Engine
+	public Engine getEngine() {
+		Engine e= new Engine("petrol" ,"1200CC");
+		return e;
+		
+	}
+	
+	//Registering a bean id type Car
+		public Car getCar() {
+		 Car c= new Car();
+		 c.setMake("Hyundai");
+		 c.setModel("I 20");
+		 c.setPrice(1800000);
+		return c;
+		 	
+		 
+		}
+
+}

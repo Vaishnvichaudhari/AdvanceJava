@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "todo1.beans.CMS" table="new_Course">
+      <id name = "courseID" type = "int" column="courseID"/>            
+      <property name = "tittle" column = "tittle" type = "string"/>
+      <property name = "duration" column = "duration" type = "int"/>
+       <property name = "provider" column = "provider" type = "string"/>
+      <property name = "fees" type = "int">
+      	<column name="fees"></column>
+      </property>     
+   </class>
+</hibernate-mapping>

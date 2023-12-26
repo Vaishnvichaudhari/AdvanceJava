@@ -1,0 +1,11 @@
+package day7;
+
+public class MessageRunnableImpl implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

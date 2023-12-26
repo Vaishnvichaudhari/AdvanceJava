@@ -1,0 +1,13 @@
+package pratice;
+
+import java.util.Collection;
+
+public class RDao implements DaoInterface<Resturant,Integer> {
+
+	@Override
+	public Collection<Resturant> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

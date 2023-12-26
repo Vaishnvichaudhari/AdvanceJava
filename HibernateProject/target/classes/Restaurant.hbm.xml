@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "day5.beans.Resturant" table="Resturant_new">
+      <id name = "id" type = "int" column="id"/>            
+      <property name = "cuisine" column = "cuisine" type = "string"/>
+      <property name = "branches" column = "branches" type = "int"/>
+      <property name = "name" type = "string">
+      	<column name="name"></column>
+      </property>     
+   </class>
+</hibernate-mapping>

@@ -1,0 +1,69 @@
+package pratice;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Collection;
+
+
+
+public class RDao implements DaoInterface<Resturant,Integer> {
+
+	@Override
+	public Collection<Resturant> getAll() {
+		String sqlquery="select * from Resturant";
+		Collection<Resturant> allRest= new ArrayList<>();
+		
+				try(
+					Connection conn=Utils.buildConnection();
+					Statement smt= conn.createStatement();
+					ResultSet rs=smt.executeQuery(sqlquery);
+					){
+					while(rs.next()) {
+						int  id= rs.getInt(1);
+						String name = rs.getString(2);
+						String cusine=rs.getString(3);
+						int branches=rs.getInt(4);
+						
+						Resturant rt= new Resturant(id,name,cusine,branches);
+					  allRest.add(rt);	
+					}
+				} 
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+	
+				return allRest;
+	     }
+
+	@Override
+	public Resturant GetOne(Integer key) {
+		Resturant frest=null;
+		try (
+			Connection conn= Utils.buildConnection();
+		){
+			String sqlquery="select * from Resturant where id=?";
+			PreparedStatement pstmt = conn.prepareStatement(sqlquery);
+			pstmt.setInt(1, key);
+			ResultSet rs= pstmt.executeQuery();
+			if(rs.next()) {
+				int  id = rs.getInt(1);
+				String name = rs.getString(2);
+				String cusine=rs.getString(3);
+				int branches=rs.getInt(4);
+				
+			 	frest=new Resturant(id,name,cusine,branches);
+				
+			}
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}	
+	}
+	
+

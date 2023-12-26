@@ -1,0 +1,43 @@
+package toDo1;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class FileRead {
+	
+	public static void main(String[] args){
+	
+	 String filePath = "./src/toDo1/course_info.txt";
+	   
+	   FileInputStream fin = null;
+	   try {
+		   fin = new FileInputStream(filePath);
+		   
+		   while(true) {
+			   int data =  fin.read();
+	       if(data==-1) 
+			   break;
+		   char ch =(char)data;
+		   System.out.print(ch);
+		   }
+		   
+		  }catch(IOException e) {
+			  System.out.println("File Name doesnot exist");
+		  }
+	
+	}
+}
+	   
+	
+	   
+
+	
+
+
+
+		
+		   
+
+		
+
+

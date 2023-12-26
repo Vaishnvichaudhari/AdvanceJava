@@ -1,0 +1,42 @@
+package pratice;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Collection;
+
+
+
+public class RDao implements DaoInterface<Resturant,Integer> {
+
+	@Override
+	public Collection<Resturant> getAll() {
+		String sqlquery="select * from Resturant";
+		Collection<Resturant> allRest= new ArrayList<>();
+		
+				try(
+					Connection conn=Utils.buildConnection();
+					Statement smt= conn.createStatement();
+					ResultSet rs=smt.executeQuery(sqlquery);
+					){
+					while(rs.next()) {
+						int  id= rs.getInt(0);
+						String name = rs.getString(1);
+						String cusine=rs.getString(2);
+						
+						Resturant rt= new Resturant(id,name,cusine);
+					  allRest.add(rt);
+						
+					}
+				
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	
+				return allRest;
+	     }	
+	}
+	
+

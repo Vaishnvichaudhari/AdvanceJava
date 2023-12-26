@@ -1,0 +1,23 @@
+ package toDo1;
+
+import java.io.FileOutputStream;
+
+
+public class FileWrite {
+
+	public static void main(String[] args) {
+		 String filePath = "./src/toDo1/course_info.txt";
+		String course_data = "\n5. Data Structures";
+		try (FileOutputStream fout = new FileOutputStream(filePath, true)){
+		
+			byte[] course_info = course_data.getBytes();
+			fout.write(course_info);
+			System.out.println("Data has been written to file.");
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+		}
+
+	}
+
+}

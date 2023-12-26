@@ -1,0 +1,5 @@
+package pratice;
+
+public interface DaoInterface {
+
+}

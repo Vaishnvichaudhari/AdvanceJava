@@ -1,0 +1,39 @@
+package day7;
+
+public class MessageThreadImpl extends Thread {
+
+	private String message;
+	private int  delaytime;
+	
+	
+public MessageThreadImpl(String message, int delaytime) {
+		super();
+		this.message = message;
+		this.delaytime = delaytime;
+	}
+
+@Override
+public void run() {
+	for(int i=0; i<=10; i++) {
+		System.out.println(message);
+	}
+	
+	try {
+		Thread.sleep(delaytime);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
+
+
+
+	public static void main(String[] args) {
+		Thread t1= new MessageThreadImpl("Hii", 2000);
+		Thread t2= new MessageThreadImpl("shwatttyy", 500);
+		t1.start();
+		t2.start();
+
+	}
+
+}

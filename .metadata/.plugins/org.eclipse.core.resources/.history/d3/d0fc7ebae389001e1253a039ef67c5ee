@@ -1,0 +1,13 @@
+package day7;
+
+public class MessageRunnableImplMain {
+
+	public static void main(String[] args) {
+		Runnable r1= new MessageRunnableImpl("Hiii" ,1000);
+		Runnable r2 = new MessageRunnableImpl("MannnaBhindi" ,2000);
+		r1.run();
+		r2.run();
+
+	}
+
+}

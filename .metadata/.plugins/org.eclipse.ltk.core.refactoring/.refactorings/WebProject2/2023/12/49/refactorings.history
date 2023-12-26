@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;UserValidator.java&apos; to &apos;SpringMvcProject/src/main/java/day2.model&apos;&#x0D;&#x0A;- Original project: &apos;WebProject2&apos;&#x0D;&#x0A;- Destination element: &apos;SpringMvcProject/src/main/java/day2.model&apos;&#x0D;&#x0A;- Original element: &apos;UserValidator.java&apos;" description="Copy file" destination="=SpringMvcProject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;day2.model" element1="src/main/java/day4/beans/UserValidator.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1702012195360" units="0" version="1.0"/>
+</session>

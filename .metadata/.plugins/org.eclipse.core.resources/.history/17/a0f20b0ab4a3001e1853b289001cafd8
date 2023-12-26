@@ -1,0 +1,57 @@
+package pratice;
+
+public class Resturant {
+	private int id;
+	private String name;
+	private String cusine;
+	
+	
+	public Resturant(){
+		
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getCusine() {
+		return cusine;
+	}
+
+
+	public void setCusine(String cusine) {
+		this.cusine = cusine;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Resturant [id=" + id + ", name=" + name + ", cusine=" + cusine + "]";
+	}
+
+
+	public Resturant(int id, String name, String cusine) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.cusine = cusine;
+	}
+
+}

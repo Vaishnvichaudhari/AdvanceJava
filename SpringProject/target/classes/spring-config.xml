@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+   http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- Registering bean of type HelloService with some ID: myBean -->
+	<bean id="myBean" class="day1.WelcomeService"/>
+	<bean id="myBean2" class="day1.HelloService"/>
+	<bean id="myBean3" class="day2.UserService" lazy-init="true"/>
+	<bean id="myBean4" class="day2.UserService"/>
+	<bean id="myBean5" class="day2.UserService" scope="prototype"/>
+	
+	<bean id="myBean6" class="day2.UserGreetingService">
+	<property name="userName"  value="vaishnavi"></property>
+	<property name="greetingMessage"  value="Hello from ME!"></property>
+	<property name="userAge"  value="21"></property>
+	</bean>
+	
+	<!--Configuring customer outer class-->
+	<bean id="myCustomer" class="day2.Customer">
+	<property name="Cid" value="1"></property>
+	<property name="Cname" value="Akansha"></property>
+	<property name="permanentAddress" ref="Nashik"></property>
+	</bean>
+	
+	<!-- Configuring Address inner class -->
+	<bean id="Nashik" class="day2.Address">
+	<property name="city" value="pune"></property>
+	<property name="pincode" value="422010"></property>
+	</bean>
+	
+	
+    
+</beans>

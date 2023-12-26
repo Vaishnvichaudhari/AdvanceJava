@@ -1,0 +1,29 @@
+package pratice;
+
+import java.util.Collection;
+import java.util.Scanner;
+
+public class MAin {
+	 private static void showAll() {
+		 DaoInterface<Resturant,Integer> idao= new RDao();
+		 Collection<Resturant> allRest= idao.getAll();
+		 for(Resturant rs:allRest)
+			 System.out.println(rs);
+		 
+	 }
+
+	 private static void getOne(int id) {
+		 DaoInterface<Resturant,Integer> idao= new RDao();
+		 Resturant res = idao.GetOne(id);
+		 System.out.println(res);
+	 }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+          // showAll();
+		Scanner sc= new Scanner(System.in);
+		int id = sc.nextInt();
+		getOne(id);
+		
+	}
+
+}

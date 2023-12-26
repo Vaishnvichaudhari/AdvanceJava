@@ -1,0 +1,19 @@
+package pratice;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class Utils {
+
+		public static Connection buildConnection()throws  Exception{
+		String driverClassName="com.mysql.cj.jdbc.Driver";
+		Class.forName(driverClassName);
+		String connectionUrl="jbdc:mysql://localhost:3360/Course?useSSl=false";
+		String userID="root";
+		String password="Vaish@123";
+		Connection dbconnection= DriverManager.getConnection(connectionUrl,userID,password);
+		return dbconnection;
+
+	}
+
+}
